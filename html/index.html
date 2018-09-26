@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> Learning JavaScript</title>
+     <link rel="stylesheet" href="style.css" />
+
+<body id="body">
+<div class="header">
+      <h1 id="heading">Learning JavaScript</h1>
+      <p>With Brad Traversy</p>
+</div>
+
+<form method="post" action="something.php" name="myform">
+  <div>
+     <label>First Name</label>
+     <input type="text" name="firstName" id="firstName" />
+   </div>
+   <br />
+   <div>
+     <label>Last Name</label>
+     <input type="text" name="lastName" id="lastName" />
+   </div>
+   <br />
+   <div>
+     <label>Background</label>
+      <select name="background" id="background"
+      onchange="changeBackground(this)">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+   </select>
+ </div>
+ <br />
+ <input type="submit" value="Submit" />
+</form>
+</div>
+
+
+<div class=" container">
+  <button onClick="changeText()">Clickme</button>
+
+</div>
+
+<script>
+function changeBackground(x){
+  console.log(x.value);
+   var body = document.getElementById('body');
+   body.style.backgroundColor = x.value;
+}
+
+// Forms
+
+//alert keyword displays the message in the html
+// console.log display the meessage on the console log
+// /aleays create a function for a method
+
+// events
+
+// function changeText(){
+//   var heading = document.getElementById('heading')
+//     heading.innerHTML = 'You Cliked me ';
+//
+// }
+
+ // decalring valiables and initialigin them
+     // var number1 = 35;
+     // var number2 = 40;
+     // alert(number1+number2);
+
+// array tips and diff ways to set variables
+
+// var colors = ['red','blue','green','purple];
+// var color1 = ['red','blue','orange']
+// addin colors to your Array
+// color1.push('yellow');
+// color1[3] = 'silver';
+
+// alert('the lenght of your array is '+color1.length );// sets the lengh of your arrray
+                                      //+color1.length will sort the lengh is lowest to maximun
+   // for loop exmaples
+   // for(var i=0; i<=10; ++i)
+   // console.log(i);
+
+   // going thru every single value inside the Array there is two methods method one
+   // var numbers = [30,35,45,78,9,8,51];
+   // numbers.reverse();
+   // numbers.forEach(function(number){
+   //   console.log(number)
+   // });
+   // method two
+  //   var numbers = [30,35,45,78,9,8,51];
+  //   for (var i =0; i< numbers.length; i++){
+  //   console.log(numbers[i]);
+  // }
+
+//  Objects Literal this is how you can encapslulate everything inside an object
+//
+// var person = {
+//   firstName: 'Claudio',
+//   lastName: 'Correia',
+//   age: 34,
+//   children: ['Santiago','Moretocome'],
+//   address: {
+//     street: 'Kale Road',
+//     city: 'Erith',
+//     borough: 'Kent'
+//   },
+//   fullName: function(){
+//     return this.firstName +" "+this.lastName
+//
+//   }
+// }
+//
+// console.log(person.fullName());
+
+// object constractor
+/* this is very tedious way of doing things if you wanted to make other fruits
+you can improve the code by useing the constructor pattern
+*/
+// var apple = new Object();
+// apple.color = 'red';
+// apple.shape = 'round';
+//
+// apple.describe = function(){
+//   return 'An apple is the color ' +this.color+ 'and is the shape'  +this.shape;
+
+
+// // constructor pattern
+// function Fruit(name, color,shape){
+//   this.name = name;
+//   this.color = color;
+//   this.shape = shape;
+//
+// }
+// var apple = new Fruit('apple','red','round')// now set the values in here for the properties of the fruit
+// var melon = new Fruit ('melon','green','round')//the more fruits we want to do is all we have to is the below line of code
+//
+// console.log(melon)
+
+// array of Objects
+//
+// var users = [
+//   {
+//      name: 'Claudio Correia',
+//      age: 34,
+//      profession: 'student'
+// },
+// {
+//    name: 'Ferrari Williams',
+//    age: 34,
+//    profession: 'mecanic'
+// },
+// {
+//    name: 'Nina Correia',
+//    age: 34,
+//    profession: 'artist'
+// },
+// ]
+//
+// console.log(users[0]);
+
+// events handling
+
+
+</script>
+
+</body>
+</html>
